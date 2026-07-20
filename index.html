@@ -692,12 +692,13 @@
             color: #FFFFFF;
             z-index: 2;
             font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
             text-align: left;
             margin: 0;
         }
 
-	.story-cover-title h3{
-		font-family: 'Georgia', serif;}
+    .story-cover-title h3{
+        font-family: 'Georgia', serif;}
 
         /* --- GUEST REVIEWS SLIDER --- */
         .reviews-section {
@@ -1074,15 +1075,15 @@
             100% { transform: scale(1.5); opacity: 0; }
         }
 
-        /* --- NEW: SCROLL TO TOP BUTTON --- */
+        /* --- NEW: SCROLL TO TOP BUTTON (BASE STYLES) --- */
         .back-to-top {
             position: fixed;
             bottom: 35px;
             right: 110px; /* Sits to the left of WhatsApp */
             background-color: var(--primary);
             color: #FFFFFF;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1466,7 +1467,7 @@
             <span class="section-subtitle">Our Roots</span>
             <h2>Return to Nature</h2>
             <p>Querencia is more than a destination; it is our family's pursuit of stillness. Nestled high in the misty mountains of Wanagiri, far above the island's relentless pace, we built a sanctuary where time moves differently.</p>
-            <p>Surrounded by ancient forests and the crisp breeze off Tamblingan Lake, every corner of our farm is designed to help you disconnect from the noise and reconnect with the earth.</p>
+            <p>Surrounded by ancient forests and the crisp breeze off Tamblingan and Buyan Lakes, every corner of our farm is designed to help you disconnect from the noise and reconnect with the earth.</p>
         </div>
         
         <div class="split-image cinematic-slider" id="about-slider">
@@ -1510,13 +1511,13 @@
         
         <div class="split-image bento-grid">
             <div class="bento-main">
-                <img src="HomeCafe/7.jpg" alt="Home Cafe Atmosphere" onerror="this.src='https://placehold.co/600x800/EAE7E0/5A6B47?text=Atmosphere'">
+                <img src="HomeCafe/7.jpg" alt="Home Cafe Atmosphere" loading="lazy" onerror="this.src='https://placehold.co/600x800/EAE7E0/5A6B47?text=Atmosphere'">
             </div>
             <div class="bento-sub bento-sub-1">
-                <img src="HomeCafe/6.jpg" alt="Fresh Coffee" onerror="this.src='https://placehold.co/600x400/DCD9D0/5A6B47?text=Coffee'">
+                <img src="HomeCafe/6.jpg" alt="Fresh Coffee" loading="lazy" onerror="this.src='https://placehold.co/600x400/DCD9D0/5A6B47?text=Coffee'">
             </div>
             <div class="bento-sub bento-sub-2">
-                <img src="HomeCafe/3.jpg" alt="Warm Pastries" onerror="this.src='https://placehold.co/600x400/F4F2EC/5A6B47?text=Food'">
+                <img src="HomeCafe/3.jpg" alt="Warm Pastries" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4F2EC/5A6B47?text=Food'">
             </div>
         </div>
     </section>
@@ -1527,15 +1528,15 @@
         
         <div class="gallery-grid">
             <div class="story-card" data-story="view">
-                <img src="Cinematic/sky-9.jpg" alt="Our Cabin View">
+                <img src="Cinematic/sky-9.jpg" alt="Our Cabin View" loading="lazy">
                 <h3 class="story-cover-title">Our Cabin View</h3>
             </div>
             <div class="story-card" data-story="atmosphere">
-                <img src="mainBG/cabin-7.jpg" alt="Atmosphere">
+                <img src="MainBG/cabin-7.jpg" alt="Atmosphere" loading="lazy">
                 <h3 class="story-cover-title">Atmosphere</h3>
             </div>
             <div class="story-card" data-story="activities">
-                <img src="Activities/1.jpg" alt="Near by Activities">
+                <img src="Activities/1.jpg" alt="Near by Activities" loading="lazy">
                 <h3 class="story-cover-title">Nearby Activities</h3>
             </div>
         </div>
@@ -1660,7 +1661,7 @@
     <!-- Sticky Mobile Book Button (Guaranteed Hidden on Desktop) -->
     <a href="#book" class="mobile-sticky-book">Book Now</a>
 
-    <!-- NEW: Smooth Scroll To Top Button -->
+    <!-- Smooth Scroll To Top Button -->
     <a href="#hero-header" id="back-to-top" class="back-to-top" aria-label="Scroll back to top">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 15l-6-6-6 6"/>
@@ -1786,10 +1787,12 @@
             }
 
             // Show "Scroll to Top" button only after scrolling down 500px
-            if (scrollY > 500) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
+            if (backToTopBtn) {
+                if (scrollY > 500) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
             }
         });
 
@@ -1810,63 +1813,14 @@
         });
 
         // ==========================================
-        // SLIDER 1: Hero Section (Crossfade Only)
+        // AUTO-LOADER LOOP: Cinematic "About" Slider
         // ==========================================
-        const heroImages = [
-            'mainBG/cabin-1.jpg', 
-            'mainBG/cabin-2.jpg', 
-            'mainBG/cabin-3.jpg', 
-            'mainBG/cabin-4.jpg', 
-            'mainBG/cabin-5.jpg', 
-            'mainBG/cabin-6.jpg', 
-            'mainBG/cabin-7.jpg',
-            'mainBG/cabin-8.jpg'  
-        ];
-
-        const heroHeader = document.getElementById('hero-header');
-        const heroSlides = []; 
-
-        heroImages.forEach((imgSrc, index) => {
-            const slideElement = document.createElement('div');
-            slideElement.classList.add('hero-bg');
-            
-            if (index === 0) slideElement.classList.add('active');
-            
-            slideElement.style.backgroundImage = `url('${imgSrc}')`;
-            heroHeader.insertBefore(slideElement, heroHeader.firstChild);
-            heroSlides.push(slideElement);
-        });
-
-        let currentHeroSlide = 0;
-
-        function nextHeroSlide() {
-            if (heroSlides.length <= 1) return;
-            heroSlides[currentHeroSlide].classList.remove('active');
-            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-            
-            void heroSlides[currentHeroSlide].offsetWidth; 
-            heroSlides[currentHeroSlide].classList.add('active');
+        const totalCinematicImages = 10; 
+        
+        const cinematicImages = [];
+        for (let i = 1; i <= totalCinematicImages; i++) {
+            cinematicImages.push(`Cinematic/${i}.jpg`);
         }
-
-        setInterval(nextHeroSlide, 6500); 
-
-        // ==========================================
-        // SLIDER 2: Advanced Interactive "About" Slider
-        // ==========================================
-        const cinematicImages = [
-            'Cinematic/farm-1.jpg',
-            'Cinematic/farm-2.jpg',
-            'Cinematic/farm-3.jpg',
-            'Cinematic/sky-1.jpg',
-            'Cinematic/sky-2.jpg',
-            'Cinematic/sky-3.jpg',
-            'Cinematic/sky-4.jpg',
-            'Cinematic/sky-5.jpg',
-            'Cinematic/sky-6.jpg',
-            'Cinematic/sky-7.jpg',
-            'Cinematic/sky-8.jpg',
-            'Cinematic/sky-9.jpg'
-        ];
 
         const aboutSlider = document.getElementById('about-slider');
         const aboutSlides = [];
@@ -1883,6 +1837,7 @@
             const imgElement = document.createElement('img');
             imgElement.src = imgSrc;
             imgElement.alt = "Cinematic landscape view";
+            imgElement.loading = "lazy";
             
             layer.appendChild(imgElement);
             aboutSlider.appendChild(layer);
@@ -1966,20 +1921,20 @@
         // SLIDER 3: Cinematic Filmstrip (Cabin Interior)
         // ==========================================
         const cabinInteriorImages = [
-            'Cabin/room-1.jpg',
-            'Cabin/room-2.jpg',
-            'Cabin/room-3.jpg',
-            'Cabin/room-4.jpg',
-            'Cabin/room-5.jpg',
-            'Cabin/room-6.jpg',
-            'Cabin/room-7.jpg',
-            'Cabin/room-8.jpg',
-            'Cabin/room-9.jpg',
-            'Cabin/bathup-1.jpg',
-            'Cabin/bathup-2.jpg',
-            'Cabin/shower-1.jpg',
-            'Cabin/shower-2.jpg',
-            'Cabin/shower-3.jpg'
+            'Cabin/1.jpg',
+            'Cabin/2.jpg',
+            'Cabin/3.jpg',
+            'Cabin/4.jpg',
+            'Cabin/5.jpg',
+            'Cabin/6.jpg',
+            'Cabin/7.jpg',
+            'Cabin/8.jpg',
+            'Cabin/9.jpg',
+            'Cabin/10.jpg',
+            'Cabin/11.jpg',
+            'Cabin/12.jpg',
+            'Cabin/13.jpg',
+            'Cabin/14.jpg'
         ];
 
         const filmstripMain = document.getElementById('filmstrip-main');
@@ -1995,6 +1950,7 @@
             const mainImg = document.createElement('img');
             mainImg.src = imgSrc;
             mainImg.alt = "Cabin interior detail";
+            mainImg.loading = "lazy";
             
             layer.appendChild(mainImg);
             filmstripMain.appendChild(layer);
@@ -2007,6 +1963,7 @@
             const thumbImg = document.createElement('img');
             thumbImg.src = imgSrc;
             thumbImg.alt = "Thumbnail";
+            thumbImg.loading = "lazy";
             
             thumb.appendChild(thumbImg);
             filmstripThumbs.appendChild(thumb);
