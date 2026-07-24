@@ -16,7 +16,7 @@
 
     @font-face {
             font-family: 'Roca Black';
-            src: url('fonts/roca-black.otf') format('truetype');
+            src: url('fonts/roca-two.ttf') format('truetype');
             font-weight: 900;
             font-style: normal;
             font-display: swap;
@@ -153,7 +153,7 @@
         .logo-text {
             font-size: 1.5rem;
             color: var(--primary);
-            font-family: 'Playfair Display', serif;
+            font-family: 'Roca Black', sans-serif;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
@@ -236,6 +236,7 @@
         .hero h1 {
             font-family: 'Roca Black', sans-serif;
             font-size: 5.5rem;
+	    color: #fdfdeb;
             margin-bottom: 30px;
             line-height: 1.1;
             letter-spacing: -1px;
@@ -692,7 +693,9 @@
             color: #FFFFFF;
             z-index: 2;
             font-size: 1.8rem;
-            font-family: 'Playfair Display', serif;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
             text-align: left;
             margin: 0;
         }
@@ -1000,6 +1003,7 @@
 
         .footer-col h3 {
             font-size: 2rem;
+	    font-family: 'Roca Black', sans-serif;
             margin-bottom: 20px;
             color: #FFFFFF;
         }
@@ -1312,7 +1316,7 @@
             .filmstrip-main { height: 45vh; }
             
             .logo-img { height: 35px; }
-            .logo-text { font-size: 1.1rem; letter-spacing: 2px; }
+            .logo-text {font-family: 'Roca Black', sans-serif; font-size: 1.1rem; letter-spacing: 2px;  }
             
             .review-quote { font-size: 1.3rem; padding: 0 20px; }
 
@@ -1426,14 +1430,14 @@
     <!-- Cinematic Preloader -->
     <div id="preloader">
         <div class="preloader-content">
-            <img src="index/logo.jpg" alt="Querencia Logo" class="preloader-logo" onerror="this.src='https://placehold.co/150x150/FAFAF7/5A6B47?text=Q'">
+            <img src="index/Logogram-Green.png" alt="Querencia Logo" class="preloader-logo" onerror="this.src='https://placehold.co/150x150/FAFAF7/5A6B47?text=Q'">
             <div class="preloader-line"></div>
         </div>
     </div>
 
     <nav id="navbar">
         <a href="#" class="logo-wrapper">
-            <img src="index/logo.jpg" alt="Querencia Logo" class="logo-img" onerror="this.src='https://placehold.co/150x150/FAFAF7/5A6B47?text=Q'">
+            <img src="index/Logogram-Green.png" alt="Querencia Logo" class="logo-img" onerror="this.src='https://placehold.co/150x150/FAFAF7/5A6B47?text=Q'">
             <span class="logo-text">Querencia Farm & Cabin</span>
         </a>
 
@@ -1461,9 +1465,11 @@
     <section id="about" class="section split-section reveal">
         <div class="split-content">
             <span class="section-subtitle">Our Roots</span>
-            <h2>Return to Nature</h2>
-            <p>Querencia is more than a destination; it is our family's pursuit of stillness. Nestled high in the misty mountains of Wanagiri, far above the island's relentless pace, we built a sanctuary where time moves differently.</p>
-            <p>Surrounded by ancient forests and the crisp breeze off Tamblingan and Buyan Lakes, every corner of our farm is designed to help you disconnect from the noise and reconnect with the earth.</p>
+            <h2>More Than a Name</h2>
+            <p>Querencia is a Spanish word that describes a place where one feels at home, where strength is restored and where one
+feels safe to simply be.</p>
+            <p>As a family-run farm and cabin, that meaning became the foundation of everything we built.</p>
+	    <p>We opened our home to create a space where people can slow down, reconnect with themselves & nature, and experience the quiet and peace we've found here in the mountains of Wanagiri.</p>
         </div>
         
         <div class="split-image cinematic-slider" id="about-slider">
@@ -1475,12 +1481,15 @@
         <div class="split-content">
             <span class="section-subtitle">The Accommodations</span>
             <h2>Your Private Sanctuary</h2>
-            <p>We designed our 36-square-meter cabins to erase the boundaries between inside and out. Raw timber, warm lighting, and expansive windows frame the untamed beauty of Buleleng.</p>
+            <p>Bright and airy by day, cozy by night, our private cabin is thoughtfully designed to invite nature in while offering all the comforts of home. Large windows fill the space with natural light and overlook our gardens and surrounding greenery.</p>
             <ul class="amenities-list">
-                <li>Premium linens on bespoke Queen-sized beds</li>
-                <li>Private en-suite with immersive hot rainfall showers</li>
-                <li>Climate control and dehumidifiers for crisp air</li>
-                <li>Secluded garden terrace with private fire-pit access</li>
+                <li>One private cabin, exclusively yours</li>
+                <li>Queen-sized bed with soft linens</li>
+                <li>Private bathroom with hot shower</li>
+                <li>Outdoor bathtub surrounded by nature</li>
+		<li>Dehumidifier for a comfort in the mountain climate</li>
+		<li>Garden with fire pit</li>
+		<li>Breakfast included to start your day</li>
             </ul>
         </div>
         
@@ -1500,17 +1509,18 @@
         <div class="split-content">
             <span class="section-subtitle">Dining</span>
             <h2>Home Cafe</h2>
-            <p>Enjoy the authentic taste of Wanagiri. Our Home Cafe serves freshly beverages, comforting meals, barbeque and warm cake baked right here on the farm.</p>
-            <p>Designed as a cozy gathering space, it is the perfect spot to start your morning or unwind with loved ones as the mountain mist rolls in.</p>
-            <a href="https://drive.google.com/drive/folders/1rCvorJPECOCH-Wxhnls4IFDS8pbvtI0T" target="_blank" rel="noopener noreferrer" class="btn-secondary">View Cafe Menu & Gallery</a>
+            <p>At Querencia, food is another way we welcome you into our home.</p>
+            <p>From freshly prepared breakfasts and comforting meals to homemade cakes and reservation-only BBQ, every dish is made with care.</p>
+	    <p>Whether you settle into the warmth of our glasshouse or dine outdoors surrounded by gardens and mountain air, we hope every meal becomes an opportunity to slow down, reconnect and simply enjoy being together.</p>
+            <a href="https://drive.google.com/drive/folders/1rCvorJPECOCH-Wxhnls4IFDS8pbvtI0T" target="_blank" rel="noopener noreferrer" class="btn-secondary">View Cafe Menu</a>
         </div>
         
         <div class="split-image bento-grid">
             <div class="bento-main">
-                <img src="HomeCafe/7.jpg" alt="Home Cafe Atmosphere" loading="lazy" onerror="this.src='https://placehold.co/600x800/EAE7E0/5A6B47?text=Atmosphere'">
+                <img src="HomeCafe/1.jpg" alt="Home Cafe Atmosphere" loading="lazy" onerror="this.src='https://placehold.co/600x800/EAE7E0/5A6B47?text=Atmosphere'">
             </div>
             <div class="bento-sub bento-sub-1">
-                <img src="HomeCafe/6.jpg" alt="Fresh Coffee" loading="lazy" onerror="this.src='https://placehold.co/600x400/DCD9D0/5A6B47?text=Coffee'">
+                <img src="HomeCafe/2.jpg" alt="Fresh Coffee" loading="lazy" onerror="this.src='https://placehold.co/600x400/DCD9D0/5A6B47?text=Coffee'">
             </div>
             <div class="bento-sub bento-sub-2">
                 <img src="HomeCafe/3.jpg" alt="Warm Pastries" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4F2EC/5A6B47?text=Food'">
@@ -1519,7 +1529,7 @@
     </section>
 
     <section id="gallery" class="section gallery-section reveal">
-        <span class="section-subtitle">Visuals</span>
+        <span class="section-subtitle">Moments</span>
         <h2 style="font-size: 3.5rem; margin-bottom: 50px;">Life at the Farm</h2>
         
         <div class="gallery-grid">
@@ -1528,8 +1538,8 @@
                 <h3 class="story-cover-title">Our Cabin View</h3>
             </div>
             <div class="story-card" data-story="atmosphere">
-                <img src="MainBG/cabin-7.jpg" alt="Atmosphere" loading="lazy">
-                <h3 class="story-cover-title">Atmosphere</h3>
+                <img src="MainBG/cabin-7.jpg" alt="Things To Do" loading="lazy">
+                <h3 class="story-cover-title">Things To Do</h3>
             </div>
             <div class="story-card" data-story="activities">
                 <img src="Activities/1.jpg" alt="Near by Activities" loading="lazy">
@@ -1545,18 +1555,18 @@
         <div class="reviews-container" id="reviews-container">
             <div class="review-slide active">
                 <div class="stars">★★★★★</div>
-                <p class="review-quote">"The mist rolling in at 6 AM was pure magic. A true sanctuary above the clouds."</p>
-                <span class="review-author">— Sarah & Mark, Australia</span>
+                <p class="review-quote">"Absolutely the comfiest place to chill and rest🌸Bersih, Rapi,Estetik dan Pemandangan Yang di Suguhkan juga Indah Memanjakan mata, Makanannya sangatt enakk Apalagi di masak langsung oleh mama pemilik cabin. Benar Benar Pengalaman yang tak terlupakan, Terimakasih Querencia Farm&Cabin🌻✨"</p>
+                <span class="review-author">— Rusyad Official, Indonesia</span>
             </div>
             <div class="review-slide">
                 <div class="stars">★★★★★</div>
-                <p class="review-quote">"Incredible attention to detail. The cabin design and the warm pastries from the cafe made our stay unforgettable."</p>
-                <span class="review-author">— Budi T., Jakarta</span>
+                <p class="review-quote">"I stayed at Querencia Farm & Cabin for 6 days and everything was absolutely wonderful. The service was excellent and everyone was super friendly. It was the perfect escape from city life, peaceful, quiet, and surrounded by nature"</p>
+                <span class="review-author">— Juni Wise., Japan</span>
             </div>
             <div class="review-slide">
                 <div class="stars">★★★★★</div>
-                <p class="review-quote">"The perfect escape from the heat of the coast. Waking up to the sounds of the forest was everything we needed."</p>
-                <span class="review-author">— Elena V., Spain</span>
+                <p class="review-quote">"This stay is incredible. In the middle of nature with amazing views and sunsets as well as close proximity to popular waterfalls. The interior is really nice and the hospitality is also very good. Immediate responses and voluntary pick-ups and transportation. Overall, it was an incredible experience. I can only recommend it :)"</p>
+                <span class="review-author">— Jules Neuen, German</span>
             </div>
         </div>
     </section>
@@ -1625,7 +1635,7 @@
             <div class="faq-item">
                 <div class="faq-question">Is the Wi-Fi reliable for remote work? <span class="faq-icon">+</span></div>
                 <div class="faq-answer">
-                    <p>Yes! While we encourage disconnecting, we provide high-speed Starlink internet in all cabins and the Home Cafe, making it perfectly suitable for video calls and remote work.</p>
+                    <p>Yes! While the mountain mist invites you to completely disconnect, we know inspiration—and deadlines—sometimes demand a connection. We provide seamless, high-speed internet blanketing the entire cabin area. Whether you need to lock in for remote work, upload heavy project files and high-res aerial footage, or just chill out and stream your favorite acoustic playlists by the window, you will have all the bandwidth you need.</p>
                 </div>
             </div>
         </div>
@@ -1635,7 +1645,7 @@
         <div class="footer-content">
             <div class="footer-col">
                 <h3>Querencia Farm & Cabin</h3>
-                <p>A place from which one's strength is drawn,<br>where one feels at home.</p>
+                <p>A place where one feels at home, finds strength and feels safe to simply be.</p>
             </div>
             <div class="footer-col">
                 <h4>Location</h4>
@@ -1646,7 +1656,7 @@
                 <h4>Contact</h4>
                 <a href="mailto:hello@querenciafarm.com">hello@querenciafarm.com</a>
                 <a href="https://wa.me/6285717016460" target="_blank" rel="noopener noreferrer">+62 857 1701 6460 (WhatsApp)</a>
-                <a href="#">@querenciafarm</a>
+                <a href="https://www.instagram.com/querenciafarm/" target="_blank" rel="noopener noreferrer">@querenciafarm</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -2044,17 +2054,27 @@
         // ==========================================
         const storyData = {
             view: [
-                { src: 'Cinematic/farm-3.jpg', title: 'Misty Mornings', desc: 'Wake up to the gentle fog rolling over the lush green valleys of Wanagiri right outside your cabin window.' },
-                { src: 'Cinematic/sky-7.jpg', title: 'Golden Hour', desc: 'Watch the sunset paint the sky in hues of orange and soft pink from your private mountain terrace.' }
+                { src: 'Cinematic/view-1.jpg', title: 'Misty Mornings', desc: 'Wake up to the gentle fog rolling over the lush green valleys of Wanagiri right outside your cabin window.' },
+                { src: 'Cinematic/view-2.jpg', title: 'Golden Hour', desc: 'Watch the sunset paint the sky in hues of orange and soft pink from your private mountain terrace.' },
+                { src: 'Cinematic/view-3.jpg', title: 'Misty Showers', desc: 'Watch the rain breathe life into the lush landscape while a cool, calming mist rolls through the trees, creating the perfect cozy escape from the everyday.' },
+                { src: 'Cinematic/view-4.jpg', title: 'Starlit Sky', desc: 'Marvel at the endless sea of twinkling stars stretching across the clear night sky, giving you a front-row seat to nature`s breathtaking nighttime magic.' }
             ],
             atmosphere: [
-                { src: 'Activities/8.jpg', title: 'Cozy Evenings', desc: 'Gather around your private space as the crisp mountain air sets in for the evening.' },
-                { src: 'Activities/10.jpg', title: 'Quiet Corners', desc: 'Find your perfect reading spot accompanied only by the gentle sounds of the garden.' },
-                { src: 'Activities/3.jpg', title: 'Rustic Design', desc: 'Every detail in our cabins is crafted from raw timber to blend seamlessly with the natural world.' }
+                { src: 'Activities/gardening.jpg', title: 'Gardening', desc: 'Find grounding in planting fresh seeds, and savor the delight of plucking your very own harvest to enjoy at the peak of freshness.' },
+                { src: 'Activities/picnic.jpg', title: 'Picnic', desc: 'Trade the dining room for the great outdoors and enjoy a delightful feast under the open sky, where the crisp fresh air sets the perfect stage for making memories.' },
+                { src: 'Activities/bbq.jpg', title: 'BBQ', desc: 'Gather around the glowing grill as the sun dips below the horizon, sharing stories and savoring mouthwatering flavors while the first stars begin to emerge.' },
+                { src: 'Activities/games.jpg', title: 'Games', desc: 'Unplug and spark some friendly competition with classic pastimes. Whether a board game or deck of cards, it’s the perfect recipe for making lighthearted memories.' },
+                { src: 'Activities/bath-time.jpg', title: 'Bath Time', desc: 'Allow the warmth and soothing comfort of a luxurious soak to wash away the day. Immerse yourself in total calm and emerge feeling completely restored and refreshed.' },
+                { src: 'Activities/fluff-time.jpg', title: 'Fluff Time', desc: 'There’s nothing like a gentle snuggle with a furry friend to fill your stay with warmth and pure happiness.' }
             ],
             activities: [
-                { src: 'Activities/6.jpg', title: 'Waterfall Trekking', desc: 'Explore the hidden, moss-covered trails leading to untouched waterfalls just minutes from the farm.' },
-                { src: 'Activities/5.jpg', title: 'Bedugul Lake', desc: 'Take a serene, seeing a peaceful waters of Bedugul Lake.' }
+                { src: 'Activities/trekking.jpg', title: 'Waterfall Trekking', desc: 'Explore the hidden, moss-covered trails leading to untouched waterfalls just minutes from the farm.' },
+                { src: 'Activities/ulun-temple.jpg', title: 'Ulun Danu Beratan Temple', desc: 'Take a serene, seeing a peaceful waters of Ulun Danu Beratan Temple.' },
+                { src: 'Activities/buyan.jpg', title: 'Lake Buyan', desc: 'The iconic twin lakes of Bali - Buyan and Tambingan. Rent a traditional wooden canoe at dawn to watch the mist rise off the untouched, glassy waters. The profound quiet here offers the perfect natural acoustics to clear your mind, find new creative inspiration, or simply sit and absorb the stillness.' },
+                { src: 'Activities/tambingan.jpg', title: 'Lake Tambingan', desc: 'The iconic twin lakes of Bali - Buyan and Tambingan. Rent a traditional wooden canoe at dawn to watch the mist rise off the untouched, glassy waters. The profound quiet here offers the perfect natural acoustics to clear your mind, find new creative inspiration, or simply sit and absorb the stillness.' },
+                { src: 'Activities/botanical.jpg', title: 'Bali Botanical Garden', desc: 'Wander through towering centuries-old trees and vibrant orchid collections in Indonesia`s largest botanical garden. It is a vast, cinematic landscape perfect for a slow-paced picnic, a quiet afternoon of writing, or capturing breathtaking aerial perspectives of the highlands.' },
+                { src: 'Activities/bike-park.jpg', title: 'Bali Bike Park', desc: 'For those seeking a pulse of adrenaline, these world-class downhill trails are woven directly into the lush forest landscape. Whether you are a beginner or a seasoned rider, experience the thrill of navigating raw, natural terrain under the dense jungle canopy.' },
+                { src: 'Activities/pancasari.jpg', title: 'Pondok svd Pancasari', desc: 'Located in the neighboring agricultural village, this serene retreat center and its surroundings are famous for their crisp air and local strawberry farms. Take a mindful morning stroll, pick fresh fruit, and enjoy the slow, rhythmic pace of highland village life.' }
             ]
         };
 
@@ -2093,6 +2113,7 @@
             
             let label = currentStoryCategory;
             if (label === 'view') label = "Our Cabin View";
+            if (label === 'atmosphere') label = "Things To Do";
             if (label === 'activities') label = "Nearby Activities";
             storyCategoryLabel.innerText = label;
 
