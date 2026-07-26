@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Querencia Farm & Cabin | Wanagiri, Bali</title>
     
     <!-- Open Graph Meta Tags -->
@@ -1673,7 +1674,7 @@ feels safe to simply be.</p>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="mailto:hello@querenciafarm.com">hello@querenciafarm.com</a>
+		<span id="secure-email"></span>
                 <a href="https://wa.me/6285717016460" target="_blank" rel="noopener noreferrer">+62 857 1701 6460 (WhatsApp)</a>
                 <a href="https://www.instagram.com/querenciafarm/" target="_blank" rel="noopener noreferrer">@querenciafarm</a>
             </div>
@@ -2171,6 +2172,16 @@ feels safe to simply be.</p>
                 storyModal.classList.remove("active");
             }
         });
+
+	// ==========================================
+        // secure email
+        // ==========================================
+	// Email Obfuscation
+	const user = "hello";
+	const domain = "querenciafarm.com";
+	const emailElement = document.getElementById("secure-email");
+	emailElement.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+
 
     </script>
 </body>
